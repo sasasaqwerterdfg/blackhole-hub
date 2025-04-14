@@ -2,55 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Black Hole Hub</title>
+  <title>Image Grid</title>
   <style>
     body {
+      margin: 0;
+      padding: 20px;
       font-family: sans-serif;
-      text-align: center;
-      background-color: #0d0d0d;
-      color: white;
+      background-color: #000;
+      color: #fff;
     }
+
     .image-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* دو ستون */
+      gap: 20px;
     }
-    .image-grid a {
-      text-decoration: none;
-      color: white;
-    }
+
     .image-grid img {
-      width: 300px;
+      width: 100%;
       height: auto;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       transition: transform 0.3s;
     }
+
     .image-grid img:hover {
       transform: scale(1.05);
-    }
-    .caption {
-      margin-top: 10px;
-      font-size: 1.1em;
     }
   </style>
 </head>
 <body>
-  <h1>Explore the Unknown</h1>
+
+  <h1 style="text-align:center;">Explore the Multiverse</h1>
+
   <div class="image-grid">
-    <a href="page1.html">
-      <img src="images/shadow.jpg" alt="Shadow Power">
-      <div class="caption">The Shadow Majestic</div>
-    </a>
-    <a href="page2.html">
-      <img src="images/blackhole.jpg" alt="Black Hole">
-      <div class="caption">The Black Hole Impact</div>
-    </a>
-    <a href="page3.html">
-      <img src="images/speed.jpg" alt="Relativity">
-      <div class="caption">Speed of Light Explained</div>
-    </a>
+    <img src="images/shadow.jpg" alt="Shadow">
+    <img src="images/blackhole.jpg" alt="Black Hole">
+    <img src="images/speed.jpg" alt="Speed of Light">
+    <img src="images/other1.jpg" alt="Other 1">
+    <img src="images/other2.jpg" alt="Other 2">
+    <!-- هر تصویری که خواستی اضافه کن -->
   </div>
+
 </body>
 </html>
