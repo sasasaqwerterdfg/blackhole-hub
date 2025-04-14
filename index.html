@@ -1,43 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>Image Grid</title>
+  <title>Black Hole Hub</title>
   <style>
     body {
+      font-family: 'Vazir', sans-serif;
+      background-color: #000;
+      color: white;
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
-      background-color: #000;
-      color: #fff;
     }
-    .grid-container {
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2em;
+    }
+
+    .image-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      padding: 20px;
+      gap: 30px;
+      padding: 40px;
+      box-sizing: border-box;
     }
-    .grid-container img {
-      width: 100%;
-      border-radius: 10px;
+
+    .image-item {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 12px;
+      text-align: center;
       transition: transform 0.3s;
     }
-    .grid-container img:hover {
-      transform: scale(1.05);
+
+    .image-item:hover {
+      transform: scale(1.03);
+    }
+
+    .image-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-<h1 style="text-align: center;">گالری تصاویر</h1>
+  <h1>چندجهانی را کاوش کنید</h1>
 
-<div class="grid-container">
-  <a href="page1.html"><img src="images/2.png" alt="Shadow Power"></a>
-  <a href="page2.html"><img src="images/2.png" alt="Shadow Power"></a>
-  <a href="page3.html"><img src="images/2.png" alt="Shadow Power"></a>
-  <a href="page1.html"><img src="images/2.png" alt="Shadow Power"></a>
-  <!-- هرچند تا خواستی اضافه کن -->
-</div>
+  <div class="image-grid">
+    <a href="page1.html" class="image-item">
+      <img src="images/1.png" alt="Shadow">
+      <div class="caption">سایه مرموز</div>
+    </a>
+    <a href="page2.html" class="image-item">
+      <img src="images/2.png" alt="Black Hole">
+      <div class="caption">سیاه‌چاله جاذب</div>
+    </a>
+    <a href="page3.html" class="image-item">
+      <img src="images/3.png" alt="Speed of Light">
+      <div class="caption">سرعت نور</div>
+    </a>
+    <a href="page4.html" class="image-item">
+      <img src="images/4.png" alt="Other">
+      <div class="caption">دیگر ۱</div>
+    </a>
+    <a href="page5.html" class="image-item">
+      <img src="images/5.png" alt="Other">
+      <div class="caption">دیگر ۲</div>
+    </a>
+  </div>
 
 </body>
 </html>
