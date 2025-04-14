@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Black Hole Hub</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #0d0d0d;
+      color: white;
+    }
+    .image-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .image-grid a {
+      text-decoration: none;
+      color: white;
+    }
+    .image-grid img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+  </style>
 </head>
 <body>
-  <h1 style="text-align:center;">🌀 Welcome to Black Hole Hub</h1>
-  <p style="text-align:center;">Where science fiction meets real physics.</p>
+  <h1>Explore the Unknown</h1>
+  <div class="image-grid">
+    <a href="page1.html">
+      <img src="images/shadow.jpg" alt="Shadow Power">
+      <div class="caption">The Shadow Majestic</div>
+    </a>
+    <a href="page2.html">
+      <img src="images/blackhole.jpg" alt="Black Hole">
+      <div class="caption">The Black Hole Impact</div>
+    </a>
+    <a href="page3.html">
+      <img src="images/speed.jpg" alt="Relativity">
+      <div class="caption">Speed of Light Explained</div>
+    </a>
+  </div>
 </body>
 </html>
