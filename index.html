@@ -5,89 +5,73 @@
   <title>Black Hole Hub</title>
   <style>
     body {
-      font-family: 'Vazir', sans-serif;
-      background-color: #000;
+      background-color: #0d0d0d;
       color: white;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
 
     h1 {
       text-align: center;
-      margin-top: 30px;
-      font-size: 2em;
+      margin-bottom: 30px;
     }
 
-    .image-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 40px;
-      box-sizing: border-box;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
-    .image-item {
+    .card {
       background-color: #111;
-      padding: 10px;
-      border-radius: 12px;
-      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
       transition: transform 0.3s;
+      text-decoration: none;
+      color: white;
     }
 
-    .image-item:hover {
+    .card:hover {
       transform: scale(1.03);
     }
 
-    .image-item img {
+    .card img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
     }
 
     .caption {
-      margin-top: 10px;
-      font-size: 1.1em;
-      color: #ccc;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    @media (max-width: 600px) {
-      .image-grid {
-        grid-template-columns: 1fr;
-      }
+      padding: 10px;
+      font-size: 0.95em;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
   <h1>چندجهانی را کاوش کنید</h1>
-
-  <div class="image-grid">
-    <a href="page1.html" class="image-item">
-      <img src="images/1.png" alt="Shadow">
-      <div class="caption">سایه مرموز</div>
+  <div class="grid">
+    <a href="page1.html" class="card">
+      <img src="images/1.jpg" alt="Shadow">
+      <div class="caption">شمشیر سایه‌ها</div>
     </a>
-    <a href="page2.html" class="image-item">
+    <a href="page2.html" class="card">
       <img src="images/2.png" alt="Black Hole">
-      <div class="caption">سیاه‌چاله جاذب</div>
+      <div class="caption">سیاه‌چاله‌ی تاریک</div>
     </a>
-    <a href="page3.html" class="image-item">
-      <img src="images/3.png" alt="Speed of Light">
+    <a href="page3.html" class="card">
+      <img src="images/3.jpg" alt="Speed of Light">
       <div class="caption">سرعت نور</div>
     </a>
-    <a href="page4.html" class="image-item">
-      <img src="images/4.png" alt="Other">
-      <div class="caption">دیگر ۱</div>
-    </a>
-    <a href="page5.html" class="image-item">
-      <img src="images/5.png" alt="Other">
-      <div class="caption">دیگر ۲</div>
+    <a href="page4.html" class="card">
+      <img src="images/4.jpg" alt="Other">
+      <div class="caption">انرژی پنهان</div>
     </a>
   </div>
-
 </body>
 </html>
