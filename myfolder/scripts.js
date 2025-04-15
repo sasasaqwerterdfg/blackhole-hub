@@ -6,6 +6,7 @@ const images = [
   { src: "images/5.png", title: "فرو پاشی", link: "page5.html" }
 ];
 
+
 const gallery = document.getElementById("gallery");
 
 images.forEach(item => {
