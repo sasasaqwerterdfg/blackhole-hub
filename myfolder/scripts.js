@@ -1,8 +1,8 @@
 const images = [
   { src: "images/2.png", title: "سایه‌ی جادویی", link: "page1.html" },
   { src: "images/1.png", title: "سیاه‌چاله آبی", link: "page2.html" },
-  { src: "images/3.png", title: "موجود مرموز", link: "page3.html" }
-  { src: "images/4.png", title: "سیاه چاه", link: "page4.html" }
+  { src: "images/3.png", title: "موجود مرموز", link: "page3.html" },
+  { src: "images/4.png", title: "سیاه چاه", link: "page4.html" },
   { src: "images/5.png", title: "فرو پاشی", link: "page5.html" }
 ];
 
