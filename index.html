@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Black Hole Hub</title>
   <style>
     body {
@@ -12,50 +11,58 @@
       margin: 0;
       padding: 20px;
     }
+
     h1 {
       text-align: center;
       margin-bottom: 30px;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
+      max-width: 800px;
+      margin: auto;
     }
+
     .card {
-      background-color: #1a1a1a;
-      border-radius: 12px;
+      background-color: #111;
+      border-radius: 10px;
       overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s;
       text-decoration: none;
       color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
     }
+
     .card:hover {
       transform: scale(1.03);
     }
+
     .card img {
       width: 100%;
-      height: 160px;
+      height: 200px;
       object-fit: cover;
       display: block;
     }
+
     .caption {
       padding: 10px;
+      font-size: 0.95em;
       text-align: center;
-      font-size: 1em;
     }
   </style>
 </head>
 <body>
-  <h1>Explore the Multiverse</h1>
+  <h1>چندجهانی را کاوش کنید</h1>
   <div class="grid">
     <a href="page1.html" class="card">
       <img src="images/1.jpg" alt="Shadow">
-      <div class="caption">سیاه‌چاله جادویی</div>
+      <div class="caption">شمشیر سایه‌ها</div>
     </a>
     <a href="page2.html" class="card">
-      <img src="images/2.jpg" alt="Black Hole">
-      <div class="caption">سیاه‌چاله</div>
+      <img src="images/2.png" alt="Black Hole">
+      <div class="caption">سیاه‌چاله‌ی تاریک</div>
     </a>
     <a href="page3.html" class="card">
       <img src="images/3.jpg" alt="Speed of Light">
@@ -63,11 +70,7 @@
     </a>
     <a href="page4.html" class="card">
       <img src="images/4.jpg" alt="Other">
-      <div class="caption">دیگر 1</div>
-    </a>
-    <a href="page5.html" class="card">
-      <img src="images/5.jpg" alt="Other">
-      <div class="caption">دیگر 2</div>
+      <div class="caption">انرژی پنهان</div>
     </a>
   </div>
 </body>
