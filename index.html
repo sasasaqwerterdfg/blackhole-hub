@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Black Hole Hub</title>
   <style>
     body {
@@ -10,78 +10,77 @@
       background-color: #0d0d0d;
       color: white;
       font-family: sans-serif;
-      direction: rtl;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
-      margin: 20px 0;
+      margin-top: 30px;
+      font-size: 2em;
     }
 
-    .grid-container {
+    .container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
       padding: 20px;
-      box-sizing: border-box;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .card {
       background-color: #1a1a1a;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s;
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
     .card img {
       width: 100%;
-      height: 200px;
+      height: 140px;
       object-fit: cover;
     }
 
     .caption {
       padding: 10px;
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     a {
-      color: white;
       text-decoration: none;
+      color: white;
     }
   </style>
 </head>
 <body>
   <h1>Explore the Multiverse</h1>
-  <div class="grid-container">
-    <a href="page1.html" class="card">
-      <img src="images/shadow.jpg" alt="Shadow">
-      <div class="caption">سایه‌ی جادویی</div>
-    </a>
+  <div class="container" id="gallery"></div>
 
-    <a href="page2.html" class="card">
-      <img src="images/blackhole.jpg" alt="Black Hole">
-      <div class="caption">سیاه‌چاله</div>
-    </a>
+  <script>
+    // لیست تصاویر (کافیه اینجا اضافه کنی یا تغییر بدی)
+    const images = [
+      { src: "images/2.png", title: "سایه‌ی جادویی", link: "page1.html" },
+      { src: "images/blackhole.jpg", title: "سیاه‌چاله", link: "page2.html" },
+      { src: "images/speed.jpg", title: "سرعت نور", link: "page3.html" },
+      { src: "images/other1.jpg", title: "دیگر ۱", link: "page4.html" },
+      { src: "images/other2.jpg", title: "دیگر ۲", link: "page5.html" }
+    ];
 
-    <a href="page3.html" class="card">
-      <img src="images/speed.jpg" alt="Speed of Light">
-      <div class="caption">سرعت نور</div>
-    </a>
+    const gallery = document.getElementById("gallery");
 
-    <a href="page4.html" class="card">
-      <img src="images/other1.jpg" alt="Other 1">
-      <div class="caption">دیگر 1</div>
-    </a>
-
-    <a href="page5.html" class="card">
-      <img src="images/other2.jpg" alt="Other 2">
-      <div class="caption">دیگر 2</div>
-    </a>
-  </div>
+    images.forEach(item => {
+      const card = document.createElement("a");
+      card.href = item.link;
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${item.src}" alt="${item.title}" />
+        <div class="caption">${item.title}</div>
+      `;
+      gallery.appendChild(card);
+    });
+  </script>
 </body>
 </html>
